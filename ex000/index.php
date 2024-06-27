@@ -8,7 +8,7 @@
 <body>
     <h1>
         <?php 
-        echo "Olá, mundo";
+        echo "Olá, mundo! \u{1F30E}";
         ?>
     </h1>
 
