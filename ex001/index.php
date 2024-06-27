@@ -10,5 +10,6 @@
     <?php 
     phpinfo();
     ?>
+
 </body>
 </html>
