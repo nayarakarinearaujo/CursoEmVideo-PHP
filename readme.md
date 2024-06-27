@@ -1,6 +1,7 @@
 # Curso de PHP Moderno: Módulo 01
 
-## Bem-vindo ao repositório do Módulo 01 do Curso de PHP Moderno do Curso em Vídeo! Este módulo é composto por 44 aulas que introduzem você ao universo do PHP, abordando desde os conceitos básicos até tópicos mais avançados. Vamos começar?
+## Bem-vindo ao repositório do Módulo 01 do Curso de PHP Moderno do Curso em Vídeo! 
+Este módulo é composto por 44 aulas que introduzem você ao universo do PHP, abordando desde os conceitos básicos até tópicos mais avançados. Vamos começar?
 
 ## Índice
 1. [Introdução ao Curso](#introdução-ao-curso)
