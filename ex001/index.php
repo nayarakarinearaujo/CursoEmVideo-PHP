@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    
     <h1>Dados do servidor</h1>
     <?php 
     phpinfo();

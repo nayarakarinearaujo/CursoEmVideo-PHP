@@ -11,10 +11,11 @@
     <h1>Exemplo de PHP</h1>
 
     <?php
-    date_default_timezone_set("America/Sao_Paulo");
-    echo "Hoje é dia " . date("d/M/Y");
+    date_default_timezone_set("America/Sao_Paulo"); //GMT -3 time zone de são paulo
+    echo "Hoje é dia " . date("d/M/Y"); //concatenação usa o ponto
     echo " e a hora atual é " . date("G:i:s T");
     ?>
+
 
 </body>
 
