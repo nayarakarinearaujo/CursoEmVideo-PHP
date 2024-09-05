@@ -10,21 +10,21 @@
 <?php 
 
 // $ representa variável
-//Variável pode ser alterada
+//* Variável pode ser alterada (redeclarada)
 $nome = "Nayara";
 $sobrenome = "Araújo";
 
-//Constante sempre com letras maiúsculas
+//* nome da constante sempre com letras maiúsculas
 const PAIS = "Brasil";
 
-//PAIS = "E.U.A"; //Constante não pode ser modificada
+//! PAIS = "E.U.A"; //Constante não pode ser modificada
 
-//Interpolação de constante é com ponto
+//? Interpolação de constante é com ponto
 echo "Muito prazer, $nome $sobrenome! Você mora no " . PAIS;
 
-//Regras para nomes identificadores
+//! Regras para nomes identificadores
 /* 
-1 - Vaiáveis sempre comçea com o símbolo $
+1 - Vaiáveis sempre começa com o símbolo $
 
 2 - O segunda caractere pode ser letra ou o símbolo _
 
@@ -38,7 +38,7 @@ echo "Muito prazer, $nome $sobrenome! Você mora no " . PAIS;
 
 7 - Nomes especiais como $this não podem ser usados
 
-/* Recomendaçõs para dar nomes
+! Recomendaçõs para dar nomes
 
 1 - Tente dar nomes claros e de fácil identificação
 
