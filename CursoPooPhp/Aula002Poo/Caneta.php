@@ -1,12 +1,15 @@
 <?php
 
-class Caneta
-{
+class Caneta {
+
+    //Atributos
     public $modelo;
     public $cor;
     public $ponta;
     public $carga;
     public $tampada;
+
+        //Métodos
 
     //Fazendo função para ver se está tampado e rabiscar
     public function rabiscar()
