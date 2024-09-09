@@ -112,8 +112,8 @@
 
             <p>O Diagrama de Classes ajuda a visualizar a arquitetura do sistema antes da implementação.</p>
 
-
-        </section> <!--
+        </section> 
+        <!--
        Modificadores de visibilidade:
     
         + publico: todos podem ver e usar o atributo, a classe atual
