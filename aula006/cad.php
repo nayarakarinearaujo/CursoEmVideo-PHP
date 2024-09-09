@@ -36,8 +36,8 @@
          permitindo que você acesse os dados enviados independentemente do método usado para a requisição.
         */
 
-        $nome = $_GET['nome'];
-        $sobrenome = $_GET['sobrenome'];
+        $nome = $_GET['nome'] ?? "Nome não fornecido";
+        $sobrenome = $_GET['sobrenome'] ?? "Sobrenome não fornecido";
         echo "<p>É um prazer te conhecer, <strong>$nome $sobrenome! Esté é o meu site!</strong></p>";
 
 
