@@ -21,6 +21,7 @@ class Caneta {
         }
     }
 
+    //Só tem acesso a um atributo privado com um método public
     public function tampar()
     {
         $this->tampada = true;
