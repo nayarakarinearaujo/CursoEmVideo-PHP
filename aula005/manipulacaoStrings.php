@@ -12,7 +12,7 @@
             margin: 20px;
             line-height: 1.6;
         }
-
+ 
         h1 {
             color: #333;
             border-bottom: 2px solid #666;
