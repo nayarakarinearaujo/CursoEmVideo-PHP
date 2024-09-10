@@ -32,9 +32,11 @@ header > h1 {
 }
 
 main, section, article {
+    max-width: 1200px; /* Limita a largura máxima a 1200px */
+
     background-color: white;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
 }
