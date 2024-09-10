@@ -18,7 +18,11 @@
 
             <h3>Aqui será gerado número de 1 a 100 de forma aleatória.</h3>
             <?php
-            $numeroAleatorio = random_int(1, 100);
+            //Fazer dessa forma apenas para gerar números protegicos criptografados
+            // pois esse método é bem lento
+            // $numeroAleatorio = random_int(1, 100);
+            
+            $numeroAleatorio = mt_rand(1, 100);
 
             echo "<p>Número gerado $numeroAleatorio</p>";
             ?>

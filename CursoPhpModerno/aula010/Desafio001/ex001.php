@@ -4,25 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desafio PHP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
-
-    <section>
+    <main>
 
         <h1>Resultado Final</h1>
 
-
-        <!-- 
-    //$nome = $_GET['nome'] ?? "Nome não fornecido"; -->
-
         <?php
 
-        $num = $_GET['number'] ?? "Número não fornecido";
+        $num = $_GET['number'] ?? 0;
 
         $antecessor = $num - 1;
         $sucessor = $num + 1;
@@ -33,7 +27,7 @@
 
         ?>
         <input type="button" value=" ⬅ Voltar" onclick="history.go(-1)">
-    </section>
+</main>
 
 
 </body>
