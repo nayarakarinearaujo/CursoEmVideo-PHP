@@ -9,7 +9,7 @@
 </head>
 <body>
     
-<!-- 5,66 -->
+<!--5.51 -->
 
 <section>
         <h1>Trabalhando com números aleatórios</h1>
@@ -18,6 +18,14 @@
 
             <?php
             
+            $cotacao = 5.51;
+
+            $real = 1000;
+
+            $dolar = $real / $cotacao;
+
+            echo "<p>Seus R\$ $real equivalem a US\$ $dolar.</p>"
+
             ?>
 
             <input type="submit" value="Gerar número aleatório">
