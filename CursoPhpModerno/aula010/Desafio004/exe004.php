@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -14,9 +14,37 @@
         <h1>Conversor de moedas</h1>
         <div id="din">
             <?php
-            $cotacao = 5.51;
+
+            //* Cotação vinda da API do Banco do brasil
+            $inicio = date("m-d-Y", strtotime("-7 days"));
+            $fim = date("m-d-Y");
+
+            $inicio = urlencode($inicio);
+            $fim = urlencode($fim);
+
+
+            $url = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial='{$inicio}'&@dataFinalCotacao='{$fim}'&\$top=1&\$orderby=dataHoraCotacao%20desc&\$format=json&\$select=cotacaoCompra,dataHoraCotacao";
+
+            $dados = file_get_contents($url);
+
+            if ($dados === false) {
+                echo 'Erro ao acessar URL';
+                exit;
+            }
+
+            $dados = json_decode($dados, true);
+
+            if ($dados === null) {
+                echo 'Erro ao decodificar JSON.';
+                exit;
+            }
+
+            $cotacao = $dados['value'][0]['cotacaoCompra'];
+
             $real = $_REQUEST["din"] ?? 0;
+
             $dolar = $real / $cotacao;
+
             // Criar formatadores para cada moeda
             $formatterReal = new NumberFormatter('pt_BR', NumberFormatter::CURRENCY);
             $formatterDolar = new NumberFormatter('en_US', NumberFormatter::CURRENCY);

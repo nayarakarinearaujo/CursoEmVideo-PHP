@@ -1,54 +1,38 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de moedas</title>
+<?php
 
-    <link rel="stylesheet" href="style.css">
-</head>
+$inicio = date("m-d-Y", strtotime("-7 days"));
+$fim = date("m-d-Y");
 
-<body>
-
-    <!--5.51 -->
-
-    <section>
-        <h1>Trabalhando com números aleatórios</h1>
-
-        <form action="ex002.php" method="get">
-
-            <?php
-
-            $cotacao = 5.51;
-            $real = 1000;
-
-            $dolar = $real / $cotacao;
-
-            // Formatar os valores
-            //$realFormatado = number_format($real, 2, ',', '.'); // Formato brasileiro
-            //$dolarFormatado = number_format($dolar, 2, '.', ','); // Formato americano
-
-            //echo "<p>Seus R\$ $realFormatado equivalem a US\$ $dolarFormatado.</p>";
-
-            //* Outra forma de fazer
-
-            // Criar formatadores para cada moeda
-            $formatterReal = new NumberFormatter('pt_BR', NumberFormatter::CURRENCY);
-            $formatterDolar = new NumberFormatter('en_US', NumberFormatter::CURRENCY);
-
-            // Formatando os valores
-            $realFormatado = $formatterReal->formatCurrency($real, 'BRL');
-            $dolarFormatado = $formatterDolar->formatCurrency($dolar, 'USD');
-
-            // Exibindo os valores formatados
-            echo "<p>Seus $realFormatado equivalem a $dolarFormatado.</p>";
-
-            ?>
+$inicio = urlencode($inicio);
+$fim = urlencode($fim);
 
 
-        </form>
-    </section>
-</body>
+$url = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial='{$inicio}'&@dataFinalCotacao='{$fim}'&\$top=1&\$orderby=dataHoraCotacao%20desc&\$format=json&\$select=cotacaoCompra,dataHoraCotacao";
 
-</html>
+    $dados = file_get_contents($url);
+
+    if($dados === false) {
+        echo 'Erro ao acessar URL';
+        exit;
+    }
+
+    $dados = json_decode($dados, true);
+
+    if($dados === null) {
+        echo 'Erro ao decodificar JSON.';
+        exit;
+    }
+
+
+    //Mostrar estruta de variável
+    echo '<pre>';
+    var_dump($dados);
+    echo '<pre>';
+
+    $cotacao = $dados['value'][0]['cotacaoCompra'];
+
+    echo "a cotação foi {$cotacao}";
+
+?>
+   
