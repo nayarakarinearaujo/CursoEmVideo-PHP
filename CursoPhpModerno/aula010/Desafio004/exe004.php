@@ -52,7 +52,7 @@
             $realFormatado = $formatterReal->formatCurrency($real, 'BRL');
             $dolarFormatado = $formatterDolar->formatCurrency($dolar, 'USD');
             // Exibindo os valores formatados
-            echo "<p>Seus $realFormatado equivalem a <strong>$dolarFormatado</strong>.</p>";
+            echo "<p>Seus $realFormatado equivalem a US<strong>$dolarFormatado</strong></p>";
             ?>
         </div>
 
