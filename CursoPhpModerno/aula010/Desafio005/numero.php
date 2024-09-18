@@ -23,7 +23,7 @@
 
         echo "<ul><li>A parte inteira do número é: <strong>". number_format($int, 0, ",", ".")."</strong></li>";
 
-        echo "<li>A parte fracionada do número é: <strong>". number_format($fra, 3, ",", ".")."</strong></li></ul>";
+        echo "<li>A parte fracionária do número é: <strong>". number_format($fra, 3, ",", ".")."</strong></li></ul>";
 
         ?>
         <button onclick="javascript:history.go(-1)">Voltar</button>
