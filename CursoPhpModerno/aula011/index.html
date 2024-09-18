@@ -5,20 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Globais do PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        h2 {
+            color: green;
+        }
+
+        p {
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Super Globais do PHP</h1>
 
     <main>
-        <h2>$_GET</h2>
-        <p>Gera um array associativo contendo os dados enviados via parâmetros de URL (método GET). Esses dados podem ser acessados diretamente no script PHP.</p>
+        <div class="section">
+            <h2>$_GET</h2>
+            <p>Gera um array associativo contendo os dados enviados via parâmetros de URL (método GET). Esses dados podem ser acessados diretamente no script PHP.</p>
+        </div>
 
-        <h2>$_POST</h2>
-        <p>Gera um array associativo com os dados enviados pelo formulário através do método POST. Ideal para dados sensíveis, como senhas, que não devem ser exibidos na URL.</p>
+        <div class="section">
+            <h2>$_POST</h2>
+            <p>Gera um array associativo com os dados enviados pelo formulário através do método POST. Ideal para dados sensíveis, como senhas, que não devem ser exibidos na URL.</p>
+        </div>
 
-        <h2>$_REQUEST</h2>
-        <p>Gera um array associativo combinando os dados enviados via GET, POST e COOKIE. Pode ser usado para acessar qualquer dado enviado, mas é menos seguro que usar diretamente $_GET ou $_POST.</p>
+        <div class="section">
+            <h2>$_REQUEST</h2>
+            <p>Combina dados de GET, POST e COOKIE em um único array associativo. Pode ser usado para acessar qualquer dado enviado, mas é menos seguro que usar diretamente $_GET ou $_POST.</p>
+        </div>
+
+        <div class="section">
+            <h2>$_COOKIE</h2>
+            <p>Gera um array associativo com os dados dos cookies enviados pelo cliente. Utilizado para armazenar informações no navegador do usuário, como preferências ou identificadores de sessão.</p>
+        </div>
+
+        <div class="section">
+            <h2>$_FILES</h2>
+            <p>Gera um array associativo com informações sobre arquivos enviados pelo formulário através do método POST. Inclui detalhes como nome, tipo, tamanho e caminho temporário dos arquivos.</p>
+        </div>
+
+        <div class="section">
+            <h2>$_SESSION</h2>
+            <p>Gera um array associativo com os dados da sessão atual do usuário. Utilizado para armazenar informações que precisam ser persistentes durante a navegação no site, como dados de login.</p>
+        </div>
+
+        <div class="section">
+            <h2>$_ENV</h2>
+            <p>Gera um array associativo com variáveis de ambiente. Usado para acessar informações de configuração do ambiente de execução, como variáveis de ambiente do servidor.</p>
+        </div>
+
+        <div class="section">
+            <h2>$_SERVER</h2>
+            <p>Gera um array associativo com informações sobre cabeçalhos, caminhos e locais do script. Inclui detalhes do servidor, informações do cliente e variáveis do ambiente do servidor.</p>
+        </div>
+
+        <div class="section">
+            <h2>$GLOBALS</h2>
+            <p>Gera um array associativo que contém todas as variáveis globais disponíveis no escopo global. É utilizado para acessar variáveis globais de dentro de funções e métodos sem precisar passá-las como parâmetros.</p>
+        </div>
     </main>
 </body>
 

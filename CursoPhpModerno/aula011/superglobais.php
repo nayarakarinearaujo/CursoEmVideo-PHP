@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -11,12 +11,35 @@
     <main>
         <pre>
             <?php
+            setcookie("dia-da-semana", "Quarta", time() + 3600);
+
+            session_start();
+            $_SESSION["test"] = "Funcionou";
+
 
             echo "<h1>Super Global GET</h1>";
             var_dump($_GET);
 
             echo "<h1>Super Global POST</h1>";
             var_dump($_POST);
+
+            echo "<h1>Super Global REQUESRT</h1>";
+            var_dump($_REQUEST);
+
+            echo "<h1>Super Global COOKIE</h1>";
+            var_dump($_COOKIE);
+
+            echo "<h1>Super Global SESSION</h1>";
+            var_dump($_SESSION);
+
+            echo "<h1>Super Global ENV</h1>";
+            var_dump($_ENV);
+
+            echo "<h1>Super Global SERVER</h1>";
+            var_dump($_SERVER);
+
+            echo "<h1>Super Global GLOBALS</h1>";
+            var_dump($GLOBALS);
 
             ?>
         </pre>
